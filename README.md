@@ -1,4 +1,4 @@
-# xcolor 🌈
+# xcolour 🌈
 
 [![Build Status](https://api.travis-ci.org/Soft/xcolor.svg?branch=master)](https://travis-ci.org/Soft/xcolor)
 [![Latest Version](https://img.shields.io/crates/v/xcolor.svg)](https://crates.io/crates/xcolor)
@@ -8,59 +8,48 @@
 
 <img align="right" src="https://raw.githubusercontent.com/Soft/xcolor/master/extra/screenshot.png">
 
-Lightweight color picker for X11. Use mouse to select colors visible anywhere on
+Lightweight colour picker for X11. Use mouse to select colours visible anywhere on
 the screen to get their RGB representation.
 
 ## Installation
 
 ### Using Cargo
 
-`xcolor` can be installed using
+`xcolour` can be installed using
 [cargo](https://doc.rust-lang.org/stable/cargo/):
 
 ``` shell
-cargo install xcolor
+cargo install xcolour
 ```
 
-Building and running `xcolor` requires [xcb](https://xcb.freedesktop.org) and
+Building and running `xcolour` requires [xcb](https://xcb.freedesktop.org) and
 [Xlib](https://www.x.org/wiki/) libraries to be present.
 
-To get the latest development version of `xcolor`, you can direct cargo to
+To get the latest development version of `xcolour`, you can direct cargo to
 install from the git repository:
 
 ``` shell
-cargo install --git 'https://github.com/Soft/xcolor.git'
+cargo install --git 'https://github.com/krayon/xcolour.git'
 ```
 
-Installing `xcolor` with cargo will not install its manual page or desktop file.
+Installing `xcolour` with cargo will not install its manual page or desktop file.
 To also install these additional files, invoke `make install` in the project
 directory. By default, the install script will place the files under
 `/usr/local/` hierarchy.
 
 
-### Arch Linux
-
-`xcolor` is available in the [Arch User Repository](https://aur.archlinux.org/packages/xcolor/).
-To install `xcolor` from AUR:
-
-``` shell
-git clone https://aur.archlinux.org/xcolor.git
-cd xcolor
-makepkg -isr
-```
-
 ## Usage
 
-Simply invoke the `xcolor` command to select a color. The selected color will be
+Simply invoke the `xcolour` command to select a colour. The selected colour will be
 printed to the standard output.
 
 ``` text
-xcolor 0.5.0
+xcolour 0.5.0
 Samuel Laurén <samuel.lauren@iki.fi>:Callum Osmotherly <acheronfail@gmail.com>
-Lightweight color picker for X11
+Lightweight colour picker for X11
 
 USAGE:
-    xcolor [OPTIONS]
+    xcolour [OPTIONS]
 
 FLAGS:
     -h, --help       Prints help information
@@ -78,16 +67,16 @@ OPTIONS:
 
 ## Saving to Selection
 
-By default, the selected color is printed to the standard output. By specifying
-the `-s` flag, `xcolor` can be instructed to instead save the color to X11's
+By default, the selected colour is printed to the standard output. By specifying
+the `-s` flag, `xcolour` can be instructed to instead save the colour to X11's
 selection. The selection to use can be specified as an argument. Possible
 selection values are `clipboard` (the default), `primary`, and `secondary`.
 
-Because of the way selections work in X11, `xcolor` forks into background when
-`-s` mode is used. This behavior can be disabled by defining `XCOLOR_FOREGROUND`
+Because of the way selections work in X11, `xcolour` forks into background when
+`-s` mode is used. This behavior can be disabled by defining `XCOLOUR_FOREGROUND`
 environment variable.
 
-## Color Preview
+## Colour Preview
 
 The `-S` or `--scale` flag controls the upscaling (or zoom) of the preview. By
 default it is set to `8` which indicates an 8x zoom level.
@@ -98,7 +87,7 @@ number is passed then it will be changed to the next odd number.
 
 ## Formatting
 
-By default, the color values will be printed in lowercase hexadecimal format.
+By default, the colour values will be printed in lowercase hexadecimal format.
 The output format can be changed using the `-f NAME` switch. Supported format
 names are listed bellow:
 
@@ -111,9 +100,9 @@ names are listed bellow:
 | `rgb`            | Decimal RGB                               | `rgb(255, 255, 255)`  | `rgb(%{r}, %{g}, %{b})`  |
 | `plain`          | Decimal with semicolon separators         | `0;0;0`               | `%{r};%{g};%{b}`         |
 
-**1**: The compact form refers to CSS three-letter color codes as specified by [CSS
-Color Module Level 3](https://www.w3.org/TR/2018/PR-css-color-3-20180315/#rgb-color).
-If the color is not expressible in three-letter form, the regular six-letter
+**1**: The compact form refers to CSS three-letter colour codes as specified by [CSS
+Colour Module Level 3](https://www.w3.org/TR/2018/PR-css-color-3-20180315/#rgb-color).
+If the colour is not expressible in three-letter form, the regular six-letter
 form will be used.
 
 ## Custom Formats
@@ -124,7 +113,7 @@ However, if custom output formatting is desired, this can be achieved using the
 and supports a simple template language.
 
 `FORMAT` templates can contain special expansions that are written inside
-`%{...}` blocks. These blocks will be expanded into color values according to
+`%{...}` blocks. These blocks will be expanded into colour values according to
 the specifiers defined inside the block. Here are some examples of valid format
 strings and what they might translate to:
 
@@ -152,9 +141,9 @@ above example string:
     `----- Character to use for padding (0)
 ```
 
-In the output, we get the contents of the red color channel formatted in binary
+In the output, we get the contents of the red colour channel formatted in binary
 and padded with zeroes to be sixteen characters long.
 
 ## Issues
 
-Bugs & Issues should be reported at [GitHub](https://github.com/Soft/xcolor/issues).
+Bugs & Issues should be reported at [GitHub](https://github.com/krayon/xcolour/issues).

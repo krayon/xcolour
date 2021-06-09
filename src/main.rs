@@ -57,7 +57,7 @@ fn run(args: &ArgMatches) -> Result<()> {
             .map_or(Some(Selection::Clipboard), |v| v.parse::<Selection>().ok())
     });
     let use_selection = selection.is_some();
-    let background = std::env::var("XCOLOR_FOREGROUND").is_err();
+    let background = std::env::var("XCOLOUR_FOREGROUND").is_err();
 
     let mut in_parent = true;
 

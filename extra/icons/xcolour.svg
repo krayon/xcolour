@@ -14,10 +14,10 @@
    viewBox="0 0 135.46666 135.46667"
    version="1.1"
    id="svg8"
-   sodipodi:docname="xcolor.svg"
+   sodipodi:docname="xcolour.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11">
   <title
-     id="title4609">XColor</title>
+     id="title4609">XColour</title>
   <defs
      id="defs2">
     <meshgradient
@@ -345,13 +345,13 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>XColor</dc:title>
+        <dc:title>XColour</dc:title>
         <dc:creator>
           <cc:Agent>
             <dc:title>Samuel Laurén</dc:title>
           </cc:Agent>
         </dc:creator>
-        <dc:description>Icon for XColor</dc:description>
+        <dc:description>Icon for XColour</dc:description>
         <dc:subject>
           <rdf:Bag>
             <rdf:li>icon</rdf:li>

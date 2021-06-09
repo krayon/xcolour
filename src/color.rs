@@ -102,7 +102,7 @@ pub fn window_rect(
 
     if reply.depth() != 24 {
         // TODO: Figure out what to do with these
-        return Err(anyhow!("Unsupported color depth"));
+        return Err(anyhow!("Unsupported colour depth"));
     }
 
     let data = reply.data();

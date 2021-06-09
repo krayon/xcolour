@@ -1,15 +1,15 @@
 '\" t
-.TH XCOLOR 1 2018
+.TH XCOLOUR 1 2018
 .SH NAME
-xcolor \- lightweight color picker for X11
+xcolour \- lightweight colour picker for X11
 .SH SYNOPSIS
-.B xcolor
+.B xcolour
 [\fB\-f\fR \fINAME\fR | \fB\-c\fR \fIFORMAT\fR] [\fB\-s\fR [\fISELECTION\fR]] [\fB\-S\fR \fISCALE\fR] [\fB\-P\fR \fIPREVIEW_SIZE\fR] [\fB\-v\fR] [\fB\-h\fR]
 .SH DESCRIPTION
-\fBxcolor\fR is a lightweight color picker for X11. Use mouse to select
-colors visible anywhere on the screen to get their RGB representation.
+\fBxcolour\fR is a lightweight colour picker for X11. Use mouse to select
+colours visible anywhere on the screen to get their RGB representation.
 .PP
-By default, the selected color is printed to the standard output.
+By default, the selected colour is printed to the standard output.
 .SH OPTIONS
 .TP
 .BI \-f " NAME\fR,\fP " \-\-format " NAME"
@@ -38,7 +38,7 @@ Print version information and exit.
 .BR \-h ", " \-\-help
 Print help message and exit.
 .SH FORMATTING
-By default, the color values are printed in lowercase hexadecimal format. The
+By default, the colour values are printed in lowercase hexadecimal format. The
 output format can be changed using the \fB\-\-format\fR \fINAME\fR switch. The
 possible \fINAME\fR values are:
 .TP
@@ -60,8 +60,8 @@ Decimal RGB
 .B plain
 Decimal with semicolon separators
 .PP
-The compact form refers to CSS three-letter color codes as specified by CSS
-Color Module Level 3. If the color is not expressible in three-letter form, the
+The compact form refers to CSS three-letter colour codes as specified by CSS
+Colour Module Level 3. If the colour is not expressible in three-letter form, the
 regular six-letter form will be used.
 .SS CUSTOM FORMATTING
 The \fB\-\-format\fR switch provides quick access to some commonly used
@@ -70,7 +70,7 @@ achieved using the \fB\-\-custom\fR \fIFORMAT\fR switch. The \fIFORMAT\fR
 parameter specifies a template for the output and supports a simple template
 language.
 \fIFORMAT\fR templates can contain special expansions that are written inside
-\fB%\fR{\fI...\fR} blocks. These blocks will be expanded into color values
+\fB%\fR{\fI...\fR} blocks. These blocks will be expanded into colour values
 according to the specifiers defined inside the block. Here are examples of valid
 format strings and what they might translate to:
 .RS
@@ -104,14 +104,14 @@ bellow illustrates how we can use these rules to decode a formatting template:
 .RE
 .fi
 
-The output is the contents of the red color channel formatted in binary and
+The output is the contents of the red colour channel formatted in binary and
 padded with zeroes to be sixteen characters long.
 .SH ENVIRONMENT
 .TP
-.I XCOLOR_FOREGROUND
-Disable daemon mode. Because of the way selections work in X11, \fBxcolor\fR
+.I XCOLOUR_FOREGROUND
+Disable daemon mode. Because of the way selections work in X11, \fBxcolour\fR
 forks into background when \fB\-\-selection\fR mode is used. This behavior can
-be disabled by defining \fIXCOLOR_FOREGROUND\fR environment variable.
+be disabled by defining \fIXCOLOUR_FOREGROUND\fR environment variable.
 .SH AUTHORS
 Samuel Laurén <samuel.lauren@iki.fi>
 Callum Osmotherly <acheronfail@gmail.com>
